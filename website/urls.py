@@ -15,3 +15,5 @@ urlpatterns = [
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 ]
+
+#https://dev.to/vincod/django-staticfiles-and-media-not-showing-when-debug-false-fixed-139a
