@@ -1,6 +1,8 @@
 from datetime import timedelta
 import os
 from pathlib import Path
+from decouple import config
+
 
 from django.conf.global_settings import AUTH_USER_MODEL
 
@@ -12,12 +14,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(c)8@wr41igobt(=q+$==6(j4)&$s^)7lude=0vs)7sk2a=fvd'
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

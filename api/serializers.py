@@ -5,12 +5,8 @@ from .models import PortifolioOwner, Project, Service
 class PortifolioOwnerSerializer(ModelSerializer):
     class Meta:
         model = PortifolioOwner
-        fields = '__all__'
- 
-class PortifolioOwnerAboutSerializer(ModelSerializer):
-    class Meta:
-        model = PortifolioOwner
-        fields = ['about_me']       
+        fields = '__all__'     
+   
         
 class ServiceSerializer(ModelSerializer):
     class Meta:
