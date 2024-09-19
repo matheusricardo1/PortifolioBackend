@@ -22,8 +22,11 @@ DEBUG = False
 ALLOWED_HOSTS = ["api.matheusricardo.site", "matheusricardo.site"]
 #ALLOWED_HOSTS = ['matheusricardo.site', 'api.matheusricardo.site']
 
+<<<<<<< HEAD
 #SECURE_SSL_REDIRECT = True
 
+=======
+>>>>>>> origin/main
 # Application definition
 
 #CSRF_COOKIE_SECURE = True
@@ -43,8 +46,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',
     'django_extensions',
+    'corsheaders',
+<<<<<<< HEAD
+    'django_extensions',
+=======
+>>>>>>> origin/main
     'sslserver',
     'rest_framework',
     'api',
