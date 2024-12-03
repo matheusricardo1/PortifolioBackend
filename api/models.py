@@ -22,6 +22,7 @@ class Service(models.Model):
     image = models.ImageField(upload_to='services/')
     description = models.CharField(max_length=200)
     order = models.PositiveIntegerField(default=0, editable=False)
+    is_published = models.BooleanField(default=True)
 
     class Meta:
         ordering = ['order']
@@ -34,6 +35,7 @@ class Project(models.Model):
     name = models.CharField(max_length=120)
     image = models.ImageField(upload_to='projects/')
     description = models.CharField(max_length=200)
+    is_published = models.BooleanField(default=True)
     
     demo = models.URLField()
     github = models.URLField()

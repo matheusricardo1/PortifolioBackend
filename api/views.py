@@ -13,9 +13,9 @@ class PortifolioOwnerViewSet(viewsets.ReadOnlyModelViewSet):
         return PortifolioOwner.objects.none()
 
 class ServiceViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Service.objects.all()
+    queryset = Service.objects.all().filter(is_published=True)
     serializer_class = ServiceSerializer
 
 class ProjectViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Project.objects.all()
+    queryset = Project.objects.all().filter(is_published=True)
     serializer_class = ProjectSerializer
