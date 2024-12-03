@@ -1,10 +1,12 @@
-from django.contrib import admin
-from django.urls import path
-from . import views
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from api import views
 
+router = DefaultRouter()
+router.register(r'owner', views.PortifolioOwnerViewSet, basename='owner')
+router.register(r'services', views.ServiceViewSet)
+router.register(r'projects', views.ProjectViewSet)
 
 urlpatterns = [
-    path('owner/', views.GetPortifolioOwner.as_view()),
-    path('services/', views.GetServices.as_view()),
-    path('projects/', views.GetProjects.as_view()),
+    path('', include(router.urls)),
 ]
