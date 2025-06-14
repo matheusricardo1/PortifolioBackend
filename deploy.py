@@ -74,7 +74,7 @@ def main():
         return
 
     # Altere para o diretório do seu projeto no PythonAnywhere
-    project_directory = '/home/matheusricardo/Fin-Personal-Finances-Back'  # Atualize este caminho
+    project_directory = '/home/matheusricardo/PortifolioBackend'  # Atualize este caminho
     send_command(console_id, f'cd {project_directory}')
 
     # 'git stash'

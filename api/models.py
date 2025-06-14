@@ -3,15 +3,16 @@ from django.db import models
 class PortifolioOwner(models.Model):
     first_name = models.CharField(max_length=60)
     last_name = models.CharField(max_length=60)
+    full_name = models.CharField(max_length=60)
     your_stack = models.CharField(max_length=120)
     image = models.ImageField(upload_to='owner/')
     linkedin = models.URLField()
     github = models.URLField()
     whatsapp = models.URLField()
     birth_date = models.DateField(blank=True, null=True)
-    
     about_me = models.TextField()
-    contact_me = models.URLField()
+    contact_me = models.EmailField()
+    youtube_url = models.URLField(blank=True, null=True)
     
     def __str__(self) -> str:
         return f'{self.first_name} {self.last_name}'

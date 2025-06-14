@@ -4,7 +4,7 @@ from api.models import PortifolioOwner, Project, Service
 class PortifolioOwnerSerializer(ModelSerializer):
     class Meta:
         model = PortifolioOwner
-        fields = '__all__'      
+        fields = '__all__'
      
 class ServiceSerializer(ModelSerializer):
     class Meta:

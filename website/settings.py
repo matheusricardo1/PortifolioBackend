@@ -19,8 +19,8 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
-#ALLOWED_HOSTS = ['matheusricardo.site', 'api.matheusricardo.site']
+#ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['matheusricardo.pythonanywhere.com', '127.0.0.1']
 
 #SECURE_SSL_REDIRECT = True
 
@@ -61,6 +61,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
 CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = 'website.urls'
 
